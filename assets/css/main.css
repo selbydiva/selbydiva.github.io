@@ -2891,6 +2891,95 @@ input, select, textarea {
 		}
 	}
 	
+/* button-project */
+
+	.slider-section {
+		position: relative;
+		width: 100%;
+		max-width: 800px;
+		margin: auto;
+		overflow: hidden;
+	}
+
+	.button-project{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.button-project li {
+		display: inline;
+	}
+
+	.button-project button{
+		font-size: 18px;
+		margin: 0 10px; /* This adds a gap between the buttons */
+		cursor: pointer;
+	}
+
+	.groups {
+		position: relative;
+		width: 100%;
+		padding: 300px;
+	}
+
+	.group {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 100%;
+		opacity: 0;
+		transition: all 0.5s ease;
+		padding: 20px;
+
+		
+
+	}
+
+	.group .project {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+		gap: 1em; /* Space between items */
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.group.active {
+		left: 0;
+		opacity: 1;
+	}
+
+	.group.inactive {
+		left: -100%;
+		opacity: 0;
+	}
+
+	.button-project button.active {
+	background-color: #845fc8;
+	color: #fff;
+	border: 2px solid #845fc8;
+	font-weight: bold;
+	/* Add any other necessary styles to highlight the active state */
+	}
+
+	.button-project button.active:hover {
+		background-color: #845fc8;
+		color: #fff;
+		border: 2px solid #845fc8;
+		/* Adjust hover styles for active button if needed */
+	}
+
+	@media (max-width: 1000px) {
+		.project {
+			grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+		}
+	}
+
+	@media (max-width: 600px) {
+		.project {
+			grid-template-columns: 1fr; /* 1 column on small screens */
+		}
+	}
 /* Features */
 
 	.features {

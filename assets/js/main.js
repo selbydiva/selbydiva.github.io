@@ -43,7 +43,38 @@
 							$nav.removeClass('alt');
 						},
 					});
-
+					document.addEventListener("DOMContentLoaded", () => {
+						const buttons = document.querySelectorAll(".button-project button");
+						const groups = document.querySelectorAll(".group");
+					
+						// Set the first button as active initially
+						buttons[0].classList.add("active");
+					
+						buttons.forEach(button => {
+							button.addEventListener("click", () => {
+								const target = button.getAttribute("data-target");
+					
+								// Remove 'active' class from all buttons
+								buttons.forEach(btn => {
+									btn.classList.remove("active");
+								});
+					
+								// Add 'active' class to the clicked button
+								button.classList.add("active");
+					
+								// Toggle 'active' and 'inactive' classes for groups
+								groups.forEach(group => {
+									if (group.classList.contains(target)) {
+										group.classList.add("active");
+										group.classList.remove("inactive");
+									} else {
+										group.classList.remove("active");
+										group.classList.add("inactive");
+									}
+							});
+						});
+					});
+				});
 			// Links.
 				var $nav_a = $nav.find('a');
 

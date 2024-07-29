@@ -2919,7 +2919,7 @@ input, select, textarea {
 	.groups {
 		position: relative;
 		width: 100%;
-		padding: 300px;
+		padding: 400px;
 	}
 
 	.group {
@@ -3090,7 +3090,7 @@ input, select, textarea {
 
 
 	.certificate .container {
-		width: 100%  /* Set the width of the container */
+		width: 100%;  /* Set the width of the container */
 		height: auto; /* Set the height of the container */
 		border-radius: 0; /* Make the container a circle */
 		overflow: hidden; /* Ensure the image does not overflow the container */

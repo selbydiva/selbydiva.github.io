@@ -122,6 +122,7 @@ input, select, textarea {
 	body {
 		background-color: #935d8c;
 		color: rgba(255, 255, 255, 0.65);
+		
 	}
 
 	body, input, select, textarea {
@@ -2794,6 +2795,25 @@ input, select, textarea {
 		border-color: rgba(255, 255, 255, 0.35);
 	}
 
+/* Video */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (divide 9 by 16 = 0.5625) */
+    overflow: hidden;
+    background: #000;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the container */
+}
+
 /* Project */
 
 	.project {
@@ -2813,6 +2833,8 @@ input, select, textarea {
 		padding: 1em;
 		border-radius: 0.5em;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		
+		
 
 	}
 		.project li .style1{
@@ -2887,7 +2909,22 @@ input, select, textarea {
 	
 	@media (max-width: 600px) {
 		.project {
-			grid-template-columns: 1fr; /* 1 column on small screens */
+			grid-template-columns: 1fr;
+
+		}
+
+		.project img {
+			width: 100px;  /* Set the width of the image to fill the container */
+			height: auto;
+		}
+
+		.project h3 a {
+			
+			font-size: 0.8rem;
+		}
+
+		.project p {
+			font-size: 0.8rem;
 		}
 	}
 	
@@ -2902,6 +2939,7 @@ input, select, textarea {
 	}
 
 	.button-project{
+		
 		text-align: center;
 		margin-bottom: 20px;
 	}
@@ -2916,13 +2954,38 @@ input, select, textarea {
 		cursor: pointer;
 	}
 
+	@media (max-width: 600px) {
+
+		.button-project {
+			display :flex;
+			justify-content: center;
+			flex-direction: column;
+			gap : 5px;
+			width: 80%;
+			margin : auto;
+		}
+
+		.button-project button {
+			font-size: 10px;
+			margin : 0 10px;
+			cursor : pointer;
+		}
+	}
+	
+
+
 	.groups {
+		
 		position: relative;
 		width: 100%;
-		padding: 400px;
+		margin-bottom: 800px;
+		
+		
+		
 	}
 
 	.group {
+		
 		position: absolute;
 		width: 100%;
 		top: 0;
@@ -2931,11 +2994,11 @@ input, select, textarea {
 		transition: all 0.5s ease;
 		padding: 20px;
 
-		
-
 	}
+	
 
 	.group .project {
+		
 		display: grid;
 		grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
 		gap: 1em; /* Space between items */
@@ -2969,17 +3032,17 @@ input, select, textarea {
 		/* Adjust hover styles for active button if needed */
 	}
 
-	@media (max-width: 1000px) {
-		.project {
-			grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+	@media (max-width: 600px) {
+		.groups {
+		
+			position: relative;
+			width: 100%;
+			margin-bottom: 1000px;
+			
 		}
 	}
 
-	@media (max-width: 600px) {
-		.project {
-			grid-template-columns: 1fr; /* 1 column on small screens */
-		}
-	}
+
 /* Features */
 
 	.features {
@@ -3114,6 +3177,15 @@ input, select, textarea {
 	.certificate .text h3 {
 		font-weight: bold
 	}
+
+	@media (max-width: 600px) {
+		.certificate{
+			grid-template-columns: repeat(2, 1fr)
+		}
+
+	}
+
+	
 
 /* Statistics */
 
@@ -3388,6 +3460,20 @@ input, select, textarea {
 
 	.sos-med .a .span .i {
 		text-decoration: none;
+	}
+
+	@media (max-width: 768px) {
+		.sos-med {
+			flex-direction: row; /* Stack items vertically on mobile */
+			justify-content: center;
+			margin: 0 0 1em 0; /* Adjust margin for mobile */
+			gap: 5px; /* Adjust gap for mobile */
+		}
+	
+		
+		.sos-med .a .span .i {
+			font-size: 14px; 
+		}
 	}
 
 /* Spotlight */

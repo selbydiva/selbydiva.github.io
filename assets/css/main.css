@@ -2914,7 +2914,7 @@ input, select, textarea {
 		}
 
 		.project img {
-			width: 100px;  /* Set the width of the image to fill the container */
+			width: 80px;  /* Set the width of the image to fill the container */
 			height: auto;
 		}
 
@@ -2924,8 +2924,10 @@ input, select, textarea {
 		}
 
 		.project p {
-			font-size: 0.8rem;
+			display: none;
 		}
+
+		
 	}
 	
 /* button-project */
@@ -2961,7 +2963,7 @@ input, select, textarea {
 			justify-content: center;
 			flex-direction: column;
 			gap : 5px;
-			width: 80%;
+			width: 65%;
 			margin : auto;
 		}
 
@@ -3181,6 +3183,14 @@ input, select, textarea {
 	@media (max-width: 600px) {
 		.certificate{
 			grid-template-columns: repeat(2, 1fr)
+		}
+
+		.certificate .text h3 {
+			font-size: 0.9rem;
+		}
+
+		.certificate p {
+			font-size: 0.8rem;
 		}
 
 	}
